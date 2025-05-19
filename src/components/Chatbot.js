@@ -1,23 +1,25 @@
-    chatbotTrigger.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter' || e.key === ' ') {
-            e.preventDefault();
-            chatbotPanel.classList.remove('hidden');
-            chatbotTrigger.classList.add('hidden');
-            document.body.classList.add('chatbot-open');
-            setTimeout(() => input.focus(), 300);
+    // chatbotTrigger.addEventListener('keydown', (e) => {
+    //     if (e.key === 'Enter' || e.key === ' ') {
+    //         e.preventDefault();
+    //         chatbotPanel.classList.remove('hidden');
+    //         chatbotTrigger.classList.add('hidden');
+    //         document.body.classList.add('chatbot-open');
+    //         setTimeout(() => input.focus(), 300);
             
-            // Show welcome message if this is first open
-            if (messages.children.length === 0) {
-                welcomeMessages.forEach(msg => {
-                    setTimeout(() => addMessage(msg, true), 500);
-                });
+    //         // Show welcome message if this is first open
+    //         if (messages.children.length === 0) {
+    //             welcomeMessages.forEach(msg => {
+    //                 setTimeout(() => addMessage(msg, true), 500);
+    //             });
                 
-                setTimeout(() => {
-                    displaySuggestions(['JavaScript', 'Python', 'Cloud', 'DevOps', 'Web Development']);
-                }, 1000);
-            }
-        }
-    });export function initChatbot() {
+    //             setTimeout(() => {
+    //                 displaySuggestions(['JavaScript', 'Python', 'Cloud', 'DevOps', 'Web Development']);
+    //             }, 1000);
+    //         }
+    //     }
+    // });
+    
+    export function initChatbot() {
     // Set CSS variables for theme colors if not already set
     if (!document.documentElement.style.getPropertyValue('--primary')) {
         document.documentElement.style.setProperty('--primary', '#4CAF50');
@@ -44,7 +46,7 @@
     // Welcome messages and suggestions
     const welcomeMessages = [
         "👋 Hi there! I'm your course advisor. What tech skills are you interested in?",
-        "I can recommend courses in JavaScript, Python, Cloud Computing, DevOps, Web Development, AI, and Cybersecurity."
+        "I can recommend courses in Cloud Computing and DevOps."
     ];
 
     // Create chatbot elements
