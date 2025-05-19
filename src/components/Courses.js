@@ -52,9 +52,6 @@ const coursesData = [
   
           <div class="course-footer">
             <div class="course-price">${course.price}</div>
-            <button class="btn btn-primary enroll-btn" data-course-id="${course.id}">
-              Learn More
-            </button>
           </div>
         </div>
       </div>
