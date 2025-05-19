@@ -1,32 +1,4 @@
-    // chatbotTrigger.addEventListener('keydown', (e) => {
-    //     if (e.key === 'Enter' || e.key === ' ') {
-    //         e.preventDefault();
-    //         chatbotPanel.classList.remove('hidden');
-    //         chatbotTrigger.classList.add('hidden');
-    //         document.body.classList.add('chatbot-open');
-    //         setTimeout(() => input.focus(), 300);
-            
-    //         // Show welcome message if this is first open
-    //         if (messages.children.length === 0) {
-    //             welcomeMessages.forEach(msg => {
-    //                 setTimeout(() => addMessage(msg, true), 500);
-    //             });
-                
-    //             setTimeout(() => {
-    //                 displaySuggestions(['JavaScript', 'Python', 'Cloud', 'DevOps', 'Web Development']);
-    //             }, 1000);
-    //         }
-    //     }
-    // });
-    
-    export function initChatbot() {
-    // Set CSS variables for theme colors if not already set
-    if (!document.documentElement.style.getPropertyValue('--primary')) {
-        document.documentElement.style.setProperty('--primary', '#4CAF50');
-        document.documentElement.style.setProperty('--dark', '#333');
-        document.documentElement.style.setProperty('--light', '#e2f1fd');
-    }
-    
+export function initChatbot() {
     // Course recommendation database
     const courseDatabase = {
         'cloud': {
@@ -40,41 +12,36 @@
             description: 'Learn CI/CD pipelines, infrastructure as code, and modern DevOps practices.',
             duration: '12 weeks',
             level: 'Intermediate to Advanced'
-        },
+        }
     };
 
     // Welcome messages and suggestions
     const welcomeMessages = [
         "👋 Hi there! I'm your course advisor. What tech skills are you interested in?",
-        "I can recommend courses in Cloud Computing and DevOps."
+        "I can recommend a course"
     ];
 
     // Create chatbot elements
     const chatbotTrigger = document.createElement('div');
     chatbotTrigger.className = 'chatbot-trigger';
     chatbotTrigger.innerHTML = '<span>🤖 Need course advice?</span>';
-    chatbotTrigger.setAttribute('role', 'button');
-    chatbotTrigger.setAttribute('tabindex', '0');
-    chatbotTrigger.setAttribute('aria-label', 'Open course advisor chatbot');
     document.body.appendChild(chatbotTrigger);
 
     const chatbotPanel = document.createElement('div');
     chatbotPanel.className = 'chatbot-panel hidden';
-    chatbotPanel.setAttribute('role', 'dialog');
-    chatbotPanel.setAttribute('aria-labelledby', 'chatbot-title');
     chatbotPanel.innerHTML = `
         <div class="chatbot-header">
-            <h3 id="chatbot-title">Course Advisor</h3>
+            <h3>Course Advisor</h3>
             <div class="chatbot-controls">
-                <button class="minimize-chatbot" aria-label="Minimize chatbot">_</button>
-                <button class="close-chatbot" aria-label="Close chatbot">×</button>
+                <button class="minimize-chatbot">_</button>
+                <button class="close-chatbot">×</button>
             </div>
         </div>
-        <div class="chatbot-messages" role="log" aria-live="polite"></div>
-        <div class="chatbot-suggestions" aria-label="Suggested topics"></div>
+        <div class="chatbot-messages"></div>
+        <div class="chatbot-suggestions"></div>
         <div class="chatbot-input">
-            <input type="text" placeholder="What tech skills are you interested in?" aria-label="Type your message">
-            <button class="send-button" aria-label="Send message">
+            <input type="text" placeholder="What tech skills are you interested in?">
+            <button class="send-button">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <line x1="22" y1="2" x2="11" y2="13"></line>
                     <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
@@ -95,9 +62,6 @@
         chatbotPanel.classList.remove('hidden');
         chatbotTrigger.classList.add('hidden');
         
-        // Add body class for mobile devices
-        document.body.classList.add('chatbot-open');
-        
         // Auto-focus the input field
         setTimeout(() => input.focus(), 300);
         
@@ -117,13 +81,11 @@
     chatbotPanel.querySelector('.close-chatbot').addEventListener('click', () => {
         chatbotPanel.classList.add('hidden');
         chatbotTrigger.classList.remove('hidden');
-        document.body.classList.remove('chatbot-open');
     });
     
     chatbotPanel.querySelector('.minimize-chatbot').addEventListener('click', () => {
         chatbotPanel.classList.add('hidden');
         chatbotTrigger.classList.remove('hidden');
-        document.body.classList.remove('chatbot-open');
     });
 
     // Typing indicator function
@@ -217,7 +179,7 @@
                 if (lowerText.includes('thank') || lowerText.includes('thanks')) {
                     addMessage("You're welcome! Feel free to ask if you need more course recommendations.", true);
                 } else if (lowerText.includes('hi') || lowerText.includes('hello') || lowerText.includes('hey')) {
-                    addMessage("Hello there! What tech skills would you like to learn? I can recommend courses in Cloud Computing and DevOps.", true);
+                    addMessage("Hello there! What tech skills would you like to learn? I can recommend courses in Cloud Computing and DevOps", true);
                 } else {
                     addMessage("Based on your interest in " + text + ", I recommend starting with our Tech Foundations module. Would you like to know about any specific technology?", true);
                     // Show suggestions
@@ -253,30 +215,6 @@
             processMessage(text);
         }
     }
-    
-    // Handle resize events for responsive adjustments
-    window.addEventListener('resize', handleResize);
-    
-    function handleResize() {
-        const isMobile = window.innerWidth <= 768;
-        
-        // Adjust chatbot position based on screen size
-        if (!chatbotPanel.classList.contains('hidden')) {
-            if (isMobile && window.innerWidth <= 480) {
-                document.body.classList.add('chatbot-open');
-            } else {
-                document.body.classList.remove('chatbot-open');
-            }
-        }
-        
-        // Scroll messages to bottom when layout changes
-        messages.scrollTop = messages.scrollHeight;
-    }
-    
-    // Handle orientation change on mobile
-    window.addEventListener('orientationchange', () => {
-        setTimeout(handleResize, 200);
-    });
     
     // Handle link clicks within the chatbot
     messages.addEventListener('click', (e) => {
