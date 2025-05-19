@@ -1,4 +1,3 @@
-// Testimonial data
 const testimonials = [
     {
         quote: "The DevOps course at Tek_init completely changed my career trajectory. Within three months, I landed a junior DevOps role with a 40% salary increase.",

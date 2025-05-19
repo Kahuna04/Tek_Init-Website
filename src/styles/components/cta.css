@@ -18,10 +18,10 @@
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
-    display: inline-block; /* Change from button to anchor styling */
+    display: inline-block;
     text-decoration: none;
     text-align: center;
-    line-height: normal; /* Reset line-height */
+    line-height: normal;
 }
 
 .cta-btn:hover {
