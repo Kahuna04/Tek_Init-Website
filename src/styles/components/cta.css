@@ -1,0 +1,31 @@
+.cta {
+    background-color: var(--primary);
+    color: var(--dark);
+    text-align: center;
+}
+
+.cta .section-title, .cta .section-subtitle {
+    color: var(--dark);
+}
+
+.cta-btn {
+    background-color: var(--dark);
+    color: var(--light);
+    padding: 1rem 3rem;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-block; /* Change from button to anchor styling */
+    text-decoration: none;
+    text-align: center;
+    line-height: normal; /* Reset line-height */
+}
+
+.cta-btn:hover {
+    background-color: #152631;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}

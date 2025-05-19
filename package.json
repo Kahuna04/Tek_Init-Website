@@ -1,0 +1,18 @@
+{
+  "name": "tek_init-website",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "parcel public/index.html",
+    "build": "parcel build public/index.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "parcel": "^2.15.1"
+  },
+  "dependencies": {
+    "three": "^0.176.0"
+  }
+}

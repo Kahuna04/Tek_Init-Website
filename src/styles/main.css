@@ -1,0 +1,10 @@
+@import './variables.css';
+@import './components/header.css';
+@import './components/hero.css';
+@import './components/courses.css';
+@import './components/about.css';
+@import './components/testimonials.css';
+@import './components/cta.css';
+@import './components/footer.css';
+@import './utilities.css';
+@import './components/chatbot.css';
