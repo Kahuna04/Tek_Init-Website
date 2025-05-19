@@ -10,6 +10,7 @@ import { initAnimations } from './animations.js';
 import { initParticles } from '../components/Particles.js';
 import { initTechSphere } from '../components/TechSphere.js';
 import { initChatbot } from '../components/Chatbot.js';
+import { initTestimonialSlider } from '../scripts/testimonials.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     // Render all components
@@ -27,4 +28,5 @@ document.addEventListener('DOMContentLoaded', () => {
     initParticles();
     initTechSphere();
     initChatbot();
+    initTestimonialSlider();
 });

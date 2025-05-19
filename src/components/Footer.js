@@ -40,9 +40,6 @@ export function renderFooter() {
                     <ul class="footer-links">
                         <li><a href="#">Cloud Computing Fundamentals</a></li>
                         <li><a href="#">DevOps Engineering</a></li>
-                        <li><a href="#">Cloud Security</a></li>
-                        <li><a href="#">AWS Certification Prep</a></li>
-                        <li><a href="#">Kubernetes Mastery</a></li>
                     </ul>
                 </div>
                 
@@ -54,7 +51,7 @@ export function renderFooter() {
                     </div>
                     <div class="contact-item">
                         <div>📱</div>
-                        <div>+1 (555) 123-4567</div>
+                        <div>+234 807-085-9502</div>
                     </div>
                     <div class="contact-item">
                         <div>📍</div>

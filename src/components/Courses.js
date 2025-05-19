@@ -27,17 +27,6 @@ export function renderCourses() {
                         <button class="btn btn-primary">Learn More</button>
                     </div>
                 </div>
-                
-                <div class="course-card">
-                    <div class="course-img">
-                        <div class="course-icon">🔒</div>
-                    </div>
-                    <div class="course-content">
-                        <h3 class="course-title">Cloud Security</h3>
-                        <p class="course-desc">Implement robust security practices for cloud infrastructure and applications.</p>
-                        <button class="btn btn-primary">Learn More</button>
-                    </div>
-                </div>
             </div>
         `;
     }
