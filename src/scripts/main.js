@@ -1,3 +1,8 @@
+console.log('Main.js is loading');
+document.addEventListener('DOMContentLoaded', () => {
+    console.log('DOM fully loaded');
+    console.log('Header container exists:', !!document.getElementById('header-container'));
+});
 import { renderHeader } from '../components/Header.js';
 import { renderHero } from '../components/Hero.js';
 import { renderCourses } from '../components/Courses.js';
@@ -9,7 +14,6 @@ import { initHeader } from './navigation.js';
 import { initAnimations } from './animations.js';
 import { initParticles } from '../components/Particles.js';
 import { initTechSphere } from '../components/TechSphere.js';
-import { initChatbot } from '../components/Chatbot.js';
 import { initTestimonialSlider } from '../scripts/testimonials.js';
 
 document.addEventListener('DOMContentLoaded', () => {

@@ -1,7 +1,25 @@
+/* Reset and global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    color: var(--text);
+    background-color: var(--background);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Header Styles */
 header {
     background-color: var(--dark);
     padding: 1.2rem 5%;
     position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     z-index: 100;
     display: flex;
@@ -22,6 +40,7 @@ header.scrolled {
     display: flex;
     align-items: center;
     gap: 1rem;
+    z-index: 150;
 }
 
 .logo {
@@ -63,6 +82,10 @@ header.scrolled {
 
 .logo-container:hover .logo-highlight::after {
     transform: scaleX(1);
+}
+
+nav {
+    z-index: 150;
 }
 
 nav ul {
@@ -153,6 +176,26 @@ nav li:not(.cta-button) a:hover::after {
     background-color: var(--primary);
 }
 
+/* Overlay for mobile menu */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 90;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+}
+
+.overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Mobile styles */
 @media (max-width: 768px) {
     .menu-toggle {
         display: flex;
@@ -172,8 +215,8 @@ nav li:not(.cta-button) a:hover::after {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        z-index: 100;
-        padding: 2rem;
+        z-index: 150;
+        padding: 6rem 2rem 2rem;
     }
     
     nav.active {
@@ -229,10 +272,17 @@ body.menu-open {
     overflow: hidden;
 }
 
-/* Add this to ensure the nav covers the full screen on mobile */
-@media (max-width: 768px) {
-    nav.active {
-        transform: translateX(0);
-        overflow-y: auto;
-    }
+/* Hero section styles */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--dark);
+    color: var(--light);
+    padding: 0 5%;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
 }
+

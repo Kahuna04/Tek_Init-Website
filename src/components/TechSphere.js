@@ -40,7 +40,7 @@ export function initTechSphere() {
   const particleGeometry = new THREE.BufferGeometry();
   const particleCount = 150;
   const positions = new Float32Array(particleCount * 3);
-  const colors = new Float32Array(particleCount * 3);
+  const particleColors = new Float32Array(particleCount * 3);
   const sizes = new Float32Array(particleCount);
 
   for (let i = 0; i < particleCount; i++) {
@@ -56,15 +56,15 @@ export function initTechSphere() {
     // Vary colors in the cyan/green spectrum
     const hue = 0.4 + Math.random() * 0.3; // From green to cyan
     const color = new THREE.Color().setHSL(hue, 1, 0.6 + Math.random() * 0.4);
-    colors[i * 3] = color.r;
-    colors[i * 3 + 1] = color.g;
-    colors[i * 3 + 2] = color.b;
+    particleColors[i * 3] = color.r;
+    particleColors[i * 3 + 1] = color.g;
+    particleColors[i * 3 + 2] = color.b;
 
     sizes[i] = Math.random() * 2 + 1;
   }
 
   particleGeometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
-  particleGeometry.setAttribute('color', new THREE.BufferAttribute(colors, 3));
+  particleGeometry.setAttribute('aColor', new THREE.BufferAttribute(particleColors, 3));
   particleGeometry.setAttribute('size', new THREE.BufferAttribute(sizes, 1));
 
   const particleMaterial = new THREE.ShaderMaterial({
@@ -73,11 +73,11 @@ export function initTechSphere() {
     },
     vertexShader: `
       attribute float size;
-      attribute vec3 color;
+      attribute vec3 aColor;
       varying vec3 vColor;
       uniform float time;
       void main() {
-        vColor = color;
+        vColor = aColor;
         vec4 modelPosition = modelMatrix * vec4(position, 1.0);
         modelPosition.y += sin(time + modelPosition.x) * 0.1;
         vec4 viewPosition = viewMatrix * modelPosition;
