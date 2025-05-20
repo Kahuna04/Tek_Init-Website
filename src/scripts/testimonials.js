@@ -159,16 +159,16 @@ export function initTestimonialSlider() {
         }
     });
 
-    // Dot navigation
-    dots.forEach((dot, dotIndex) => {
-        dot.addEventListener('click', () => {
-            if (!isAnimating) {
-                currentIndex = dotIndex + 2; // Adjust for cloned items
-                updateSlider();
-                startAutoplay(); // Restart autoplay after manual interaction
-            }
-        });
-    });
+    // // Dot navigation
+    // dots.forEach((dot, dotIndex) => {
+    //     dot.addEventListener('click', () => {
+    //         if (!isAnimating) {
+    //             currentIndex = dotIndex + 2; // Adjust for cloned items
+    //             updateSlider();
+    //             startAutoplay(); // Restart autoplay after manual interaction
+    //         }
+    //     });
+    // });
 
     // Keyboard navigation
     document.addEventListener('keydown', (e) => {

@@ -84,23 +84,23 @@ const testimonials = [
         track.appendChild(card);
       });
       
-      // Create dots (only for original testimonials)
-      testimonials.forEach((_, index) => {
-        const dot = document.createElement('button');
-        dot.className = 'slider-dot';
-        if (index === 0) {
-          dot.classList.add('active');
-        }
-        // Important: Explicitly set the dot sizing here
-        const isMobile = window.innerWidth <= 480;
-        if (isMobile) {
-          dot.style.width = '4px';
-          dot.style.height = '4px';
-          dot.style.margin = '0 2px';
-        }
-        dot.setAttribute('data-index', index);
-        dotsContainer.appendChild(dot);
-      });
+    //   // Create dots (only for original testimonials)
+    //   testimonials.forEach((_, index) => {
+    //     const dot = document.createElement('button');
+    //     dot.className = 'slider-dot';
+    //     if (index === 0) {
+    //       dot.classList.add('active');
+    //     }
+    //     // Important: Explicitly set the dot sizing here
+    //     const isMobile = window.innerWidth <= 480;
+    //     if (isMobile) {
+    //       dot.style.width = '4px';
+    //       dot.style.height = '4px';
+    //       dot.style.margin = '0 2px';
+    //     }
+    //     dot.setAttribute('data-index', index);
+    //     dotsContainer.appendChild(dot);
+    //   });
       
       // Initialize slider
       initTestimonialSlider();
@@ -209,13 +209,13 @@ const testimonials = [
         });
       }
       
-      // Update dots - use adjusted index for cloned items
-      const realIndex = currentIndex - 2; // Adjust for cloned items at the beginning
-      const normalizedIndex = ((realIndex % dots.length) + dots.length) % dots.length; // Handle negative indices
+    //   // Update dots - use adjusted index for cloned items
+    //   const realIndex = currentIndex - 2; // Adjust for cloned items at the beginning
+    //   const normalizedIndex = ((realIndex % dots.length) + dots.length) % dots.length; // Handle negative indices
       
-      dots.forEach((dot, index) => {
-        dot.classList.toggle('active', index === normalizedIndex);
-      });
+    //   dots.forEach((dot, index) => {
+    //     dot.classList.toggle('active', index === normalizedIndex);
+    //   });
       
       setTimeout(() => {
         isAnimating = false;
@@ -291,16 +291,16 @@ const testimonials = [
       }
     });
   
-    // Dot navigation
-    dots.forEach((dot, dotIndex) => {
-      dot.addEventListener('click', () => {
-        if (!isAnimating) {
-          currentIndex = dotIndex + 2; // Adjust for cloned items
-          updateSlider();
-          startAutoplay(); // Restart autoplay after manual interaction
-        }
-      });
-    });
+    // // Dot navigation
+    // dots.forEach((dot, dotIndex) => {
+    //   dot.addEventListener('click', () => {
+    //     if (!isAnimating) {
+    //       currentIndex = dotIndex + 2; // Adjust for cloned items
+    //       updateSlider();
+    //       startAutoplay(); // Restart autoplay after manual interaction
+    //     }
+    //   });
+    // });
   
     // Keyboard navigation
     document.addEventListener('keydown', (e) => {
@@ -328,7 +328,7 @@ const testimonials = [
     });
   
     // Initialize
-    updateDotSizes(); // Set initial dot sizes
+    // updateDotSizes(); // Set initial dot sizes
     updateMobileStatus();
     startAutoplay();
   }
