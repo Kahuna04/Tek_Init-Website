@@ -33,42 +33,58 @@ export function renderHeader() {
                         <li><a href="#courses">Courses</a></li>
                         <li><a href="#about">About Us</a></li>
                         <li><a href="#testimonials">Testimonials</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li class="cta-button"><a href="#contact">Contact</a></li>
                     </ul>
                 </nav>
             </header>
         `;
-
+        
         // Add event listeners
         const menuToggle = document.getElementById('menuToggle');
         const nav = document.getElementById('nav');
         const header = document.getElementById('header');
-
+        
         if (menuToggle && nav) {
-            menuToggle.addEventListener('click', () => {
+            menuToggle.addEventListener('click', function() {
                 nav.classList.toggle('active');
                 menuToggle.classList.toggle('active');
+                // Add this line to prevent scrolling when menu is open
+                document.body.classList.toggle('menu-open');
             });
         }
-
+        
         // Scroll event for header behavior
-        window.addEventListener('scroll', () => {
+        window.addEventListener('scroll', function() {
             if (window.scrollY > 100) {
                 header.classList.add('scrolled');
             } else {
                 header.classList.remove('scrolled');
             }
         });
-
+        
         // Close mobile menu when clicking a navigation link
         const navLinks = document.querySelectorAll('nav a');
         navLinks.forEach(link => {
-            link.addEventListener('click', () => {
+            link.addEventListener('click', function() {
                 if (window.innerWidth <= 768) {
                     nav.classList.remove('active');
                     menuToggle.classList.remove('active');
+                    document.body.classList.remove('menu-open');
                 }
             });
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            if (window.innerWidth <= 768 && 
+                nav.classList.contains('active') && 
+                !nav.contains(event.target) && 
+                !menuToggle.contains(event.target)) {
+                    
+                nav.classList.remove('active');
+                menuToggle.classList.remove('active');
+                document.body.classList.remove('menu-open');
+            }
         });
     }
 }

@@ -224,3 +224,15 @@ nav li:not(.cta-button) a:hover::after {
         font-size: 1.2rem;
     }
 }
+
+body.menu-open {
+    overflow: hidden;
+}
+
+/* Add this to ensure the nav covers the full screen on mobile */
+@media (max-width: 768px) {
+    nav.active {
+        transform: translateX(0);
+        overflow-y: auto;
+    }
+}
