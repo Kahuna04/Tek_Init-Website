@@ -27,6 +27,5 @@ document.addEventListener('DOMContentLoaded', () => {
     initAnimations();
     initParticles();
     initTechSphere();
-    initChatbot();
     initTestimonialSlider();
 });

@@ -12,9 +12,24 @@ export function initTestimonialSlider() {
     let currentIndex = 2; // Start showing testimonials 0 and 1 (after 2 cloned items)
     let isAnimating = false;
     let autoplayInterval;
+    let isMobile = window.innerWidth <= 480;
 
     function getCardWidth() {
         return cards[0] ? cards[0].offsetWidth + 20 : 300; // Include margin
+    }
+
+    function updateMobileStatus() {
+        isMobile = window.innerWidth <= 480;
+        
+        // Force update the slider to apply mobile-specific layout
+        updateSlider();
+        
+        // Make sure all cards are visible on desktop
+        if (!isMobile) {
+            cards.forEach(card => {
+                card.style.display = '';
+            });
+        }
     }
 
     function updateSlider() {
@@ -25,29 +40,49 @@ export function initTestimonialSlider() {
         const totalWidth = cardWidth * cards.length;
         const containerWidth = slider.offsetWidth;
         
-        // Calculate offset to show 4 testimonials (2 fully, 2 partially)
-        // We want to center the 2 middle testimonials
-        const visibleCards = 4;
-        const offset = currentIndex * cardWidth - (containerWidth / 2) + cardWidth;
-        
-        track.style.transform = `translateX(-${offset}px)`;
-        
-        // Update card states (highlighting the 2 center cards)
-        cards.forEach((card, index) => {
-            card.classList.remove('active', 'semi-active');
+        // Mobile-specific behavior
+        if (isMobile) {
+            // Only show active card on mobile
+            cards.forEach((card, index) => {
+                card.classList.remove('active', 'semi-active');
+                
+                if (index === currentIndex) {
+                    card.classList.add('active');
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
             
-            if (index === currentIndex || index === currentIndex + 1) {
-                card.classList.add('active');
-            } else if (index === currentIndex - 1 || index === currentIndex + 2) {
-                card.classList.add('semi-active');
-            }
-        });
+            // No need for translation on mobile as we're hiding other cards
+            track.style.transform = `translateX(0)`;
+        } else {
+            // Calculate offset to show 4 testimonials (2 fully, 2 partially)
+            // We want to center the 2 middle testimonials
+            const visibleCards = 4;
+            const offset = currentIndex * cardWidth - (containerWidth / 2) + cardWidth;
+            
+            track.style.transform = `translateX(-${offset}px)`;
+            
+            // Update card states (highlighting the 2 center cards)
+            cards.forEach((card, index) => {
+                card.classList.remove('active', 'semi-active');
+                card.style.display = '';
+                
+                if (index === currentIndex || index === currentIndex + 1) {
+                    card.classList.add('active');
+                } else if (index === currentIndex - 1 || index === currentIndex + 2) {
+                    card.classList.add('semi-active');
+                }
+            });
+        }
         
-        // Update dots
+        // Update dots - use adjusted index for cloned items
         const realIndex = currentIndex - 2; // Adjust for cloned items at the beginning
-        const dotIndex = Math.max(0, Math.min(dots.length - 1, realIndex));
+        const normalizedIndex = ((realIndex % dots.length) + dots.length) % dots.length; // Handle negative indices
+        
         dots.forEach((dot, index) => {
-            dot.classList.toggle('active', index === dotIndex);
+            dot.classList.toggle('active', index === normalizedIndex);
         });
         
         setTimeout(() => {
@@ -57,23 +92,35 @@ export function initTestimonialSlider() {
             if (currentIndex >= cards.length - 3) {
                 currentIndex = 2;
                 track.style.transition = 'none';
-                const cardWidth = getCardWidth();
-                const containerWidth = slider.offsetWidth;
-                const offset = currentIndex * cardWidth - (containerWidth / 2) + cardWidth;
-                track.style.transform = `translateX(-${offset}px)`;
+                
+                if (!isMobile) {
+                    const cardWidth = getCardWidth();
+                    const containerWidth = slider.offsetWidth;
+                    const offset = currentIndex * cardWidth - (containerWidth / 2) + cardWidth;
+                    track.style.transform = `translateX(-${offset}px)`;
+                }
+                
                 setTimeout(() => {
                     track.style.transition = 'transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
                 }, 50);
+                
+                updateSlider(); // Force update for mobile to show correct card
             } else if (currentIndex <= 1) {
                 currentIndex = cards.length - 4;
                 track.style.transition = 'none';
-                const cardWidth = getCardWidth();
-                const containerWidth = slider.offsetWidth;
-                const offset = currentIndex * cardWidth - (containerWidth / 2) + cardWidth;
-                track.style.transform = `translateX(-${offset}px)`;
+                
+                if (!isMobile) {
+                    const cardWidth = getCardWidth();
+                    const containerWidth = slider.offsetWidth;
+                    const offset = currentIndex * cardWidth - (containerWidth / 2) + cardWidth;
+                    track.style.transform = `translateX(-${offset}px)`;
+                }
+                
                 setTimeout(() => {
                     track.style.transition = 'transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
                 }, 50);
+                
+                updateSlider(); // Force update for mobile to show correct card
             }
         }, 600);
     }
@@ -142,10 +189,12 @@ export function initTestimonialSlider() {
     let resizeTimeout;
     window.addEventListener('resize', () => {
         clearTimeout(resizeTimeout);
-        resizeTimeout = setTimeout(updateSlider, 100);
+        resizeTimeout = setTimeout(() => {
+            updateMobileStatus();
+        }, 100);
     });
 
     // Initialize
-    updateSlider();
+    updateMobileStatus();
     startAutoplay();
 }
