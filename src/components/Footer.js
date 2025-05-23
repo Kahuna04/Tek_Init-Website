@@ -49,7 +49,7 @@ export function renderFooter() {
                 <div class="footer-links-section">
                     <h3 class="footer-title">Quick Links</h3>
                     <ul class="footer-links">
-                        <li><a href="#home">Home</a></li>
+                        <li><a href="index.html">Home</a></li>
                         <li><a href="#courses">Courses</a></li>
                         <li><a href="#about">About Us</a></li>
                         <li><a href="#testimonials">Testimonials</a></li>
@@ -60,8 +60,8 @@ export function renderFooter() {
                 <div class="footer-links-section">
                     <h3 class="footer-title">Our Courses</h3>
                     <ul class="footer-links">
-                        <li><a href="#">Cloud Computing Fundamentals</a></li>
-                        <li><a href="#">DevOps Engineering</a></li>
+                        <li><a href="cloud-computing.html">Cloud Computing Fundamentals</a></li>
+                        <li><a href="devops-engineering.html">DevOps Engineering</a></li>
                     </ul>
                 </div>
                 
@@ -89,7 +89,7 @@ export function renderFooter() {
                                 <path d="M12 0c-4.198 0-8 3.403-8 7.602 0 4.198 3.469 9.21 8 16.398 4.531-7.188 8-12.2 8-16.398 0-4.199-3.801-7.602-8-7.602zm0 11c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z"/>
                             </svg>
                         </div>
-                        <div>123 Tech Street, Innovation Hub, CA 94103</div>
+                        <div>Lagos, Nigeria</div>
                     </div>
                 </div>
             </div>

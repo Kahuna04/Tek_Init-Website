@@ -78,7 +78,6 @@ export function renderCloudDetail() {
             
             <div class="course-hero-price">
               ${courseData.price}
-              <span class="price-badge">Best Value</span>
             </div>
             
             <button class="enroll-btn-hero">

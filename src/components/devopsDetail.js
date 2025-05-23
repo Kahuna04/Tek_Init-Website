@@ -93,7 +93,6 @@ const courseData = {
               
               <div class="course-hero-price">
                 ${courseData.price}
-                <span class="price-badge">Industry Standard</span>
               </div>
               
               <button class="enroll-btn-hero">

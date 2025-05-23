@@ -29,7 +29,7 @@ export function renderHeader() {
                 
                 <nav id="nav">
                     <ul>
-                        <li><a href="index.html"">Home</a></li>
+                        <li><a href="index.html">Home</a></li>
                         <li><a href="#courses">Courses</a></li>
                         <li><a href="#about">About Us</a></li>
                         <li><a href="#testimonials">Testimonials</a></li>
@@ -58,7 +58,10 @@ export function renderHeader() {
             }
             
             // Toggle menu
-            menuToggle.addEventListener('click', function() {
+            menuToggle.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                
                 nav.classList.toggle('active');
                 menuToggle.classList.toggle('active');
                 overlay.classList.toggle('active');
@@ -67,6 +70,7 @@ export function renderHeader() {
                 // Debug logging
                 console.log('Menu toggle clicked');
                 console.log('Nav active:', nav.classList.contains('active'));
+                console.log('Nav element:', nav);
             });
             
             // Close mobile menu when clicking a navigation link
