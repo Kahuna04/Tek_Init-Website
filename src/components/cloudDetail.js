@@ -182,7 +182,6 @@ document.querySelectorAll('.enroll-btn-hero, .enroll-btn-cta').forEach(btn => {
   });
 });
 
-// Add smooth scrolling for better UX
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
