@@ -1,3 +1,4 @@
+/* Reset and global styles */
 * {
     margin: 0;
     padding: 0;
@@ -211,11 +212,11 @@ nav li:not(.cta-button) a:hover::after {
         box-shadow: -5px 0 20px rgba(0, 0, 0, 0.2);
         transform: translateX(100%);
         transition: transform 0.5s cubic-bezier(0.65, 0, 0.35, 1);
-        z-index: 150;
-        padding: 6rem 2rem 2rem;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
+        z-index: 150;
+        padding: 6rem 2rem 2rem;
     }
     
     nav.active {
@@ -230,32 +231,22 @@ nav li:not(.cta-button) a:hover::after {
         padding-top: 2rem;
     }
     
-    nav li {
-        width: 100%;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        padding-bottom: 1rem;
-    }
-    
     nav a {
         display: block;
-        padding: 1rem 0;
+        padding: 0.7rem 0;
         font-size: 1.1rem;
-        width: 100%;
-        color: var(--light);
     }
     
     .cta-button {
         margin-top: 1rem;
         width: 100%;
-        border-bottom: none;
     }
     
     .cta-button a {
         display: block;
         width: 100%;
         text-align: center;
-        padding: 1rem;
-        margin-top: 1rem;
+        padding: 0.8rem;
     }
     
     .logo-text {
@@ -276,16 +267,13 @@ nav li:not(.cta-button) a:hover::after {
     .logo-text {
         font-size: 1.2rem;
     }
-    
-    nav {
-        width: 90%;
-    }
 }
 
 body.menu-open {
     overflow: hidden;
 }
 
+/* Hero section styles */
 .hero {
     height: 100vh;
     display: flex;
@@ -299,27 +287,3 @@ body.menu-open {
     overflow: hidden;
 }
 
-.hero h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-}
-
-.hero p {
-    font-size: 1.2rem;
-    opacity: 0.9;
-}
-
-/* Demo sections */
-.section {
-    min-height: 100vh;
-    padding: 5rem 5%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-#courses { background-color: #f8f9fa; }
-#about { background-color: #e9ecef; }
-#testimonials { background-color: #f8f9fa; }
-#contact { background-color: var(--dark); color: var(--light); }
