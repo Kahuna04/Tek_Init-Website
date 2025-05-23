@@ -11,7 +11,7 @@ export function renderFooter() {
                                     <stop offset="0%" stop-color="#00f5a0" />
                                     <stop offset="100%" stop-color="#00aeff" />
                                 </linearGradient>
-                            </defs>
+                            </defs>https://docs.google.com/forms/d/e/1FAIpQLSdPFvvQuNdexpSU8K2v4j9KBB55bmYc6MTINGCj4u4vqaR_Jw/viewform?usp=sharing&ouid=107521154396122676672
                             <rect x="15" y="15" width="70" height="70" rx="10" transform="rotate(45 50 50)" fill="url(#footerLogoGradient)" />
                             <circle cx="50" cy="50" r="15" fill="url(#footerLogoGradient)" />
                             <line x1="50" y1="20" x2="50" y2="80" stroke="#1e3142" stroke-width="2" />

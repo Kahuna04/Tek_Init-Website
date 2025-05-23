@@ -10,6 +10,8 @@ import { renderAbout } from '../components/About.js';
 import { renderTestimonials } from '../components/Testimonials.js';
 import { renderCTA } from '../components/CTA.js';
 import { renderFooter } from '../components/Footer.js';
+import { renderCloudDetail } from '../components/cloudDetail.js';
+import { renderDevOpsDetail } from '../components/devopsDetail.js';
 import { initHeader } from './navigation.js';
 import { initAnimations } from './animations.js';
 import { initParticles } from '../components/Particles.js';
@@ -25,6 +27,8 @@ document.addEventListener('DOMContentLoaded', () => {
     renderTestimonials();
     renderCTA();
     renderFooter();
+    renderCloudDetail();
+    renderDevOpsDetail();
     
     // Initialize functionality
     initHeader();

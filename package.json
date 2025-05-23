@@ -2,8 +2,8 @@
   "name": "tek_init-website",
   "version": "1.0.0",
   "scripts": {
-    "dev": "parcel public/index.html",
-    "build": "parcel build public/index.html"
+    "dev": "parcel public/*.html",
+    "build": "parcel build public/*.html"
   },
   "keywords": [],
   "author": "",
