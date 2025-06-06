@@ -18,7 +18,7 @@ export function renderHeader() {
                         <line x1="27" y1="27" x2="73" y2="73" stroke="#1e3142" stroke-width="2" />
                         <line x1="73" y1="27" x2="27" y2="73" stroke="#1e3142" stroke-width="2" />
                     </svg>
-                    <div class="logo-text">Tek<span class="logo-highlight">_init</span></div>
+                    <div class="logo-text">Tek<span class="logo-highlight">_Init</span></div>
                 </div>
                 
                 <div class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">
