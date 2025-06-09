@@ -1,15 +1,15 @@
 const courseData = {
   id: 'cloud-computing',
   title: 'Cloud Computing Fundamentals',
-  subtitle: 'Master AWS, Azure, and GCP with hands-on projects',
-  description: 'This comprehensive course will take you from cloud computing basics to deploying scalable applications on major cloud platforms. You\'ll gain practical experience with real-world projects and earn a certificate upon completion.',
+  subtitle: 'Master AWS with hands-on projects',
+  description: 'This comprehensive course will take you from cloud computing basics to deploying scalable applications on major cloud platform. You\'ll gain practical experience with real-world projects and earn a certificate upon completion.',
   icon: '☁️',
   price: '₦150,000',
   students: '50+',
   duration: '8 Weeks',
   learnItems: [
     'Fundamentals of cloud computing and virtualization',
-    'Deploying applications on AWS, Azure, and GCP',
+    'Deploying applications on AWS',
     'Cloud security best practices and compliance',
     'Containerization with Docker and Kubernetes',
     'Serverless computing and microservices',
@@ -25,7 +25,7 @@ const courseData = {
       ]
     },
     {
-      title: 'Week 3-4: AWS Core Services',
+      title: 'Week 3-6: AWS Core Services',
       items: [
         'EC2 instances and auto-scaling groups',
         'S3 storage solutions and data management',
@@ -33,18 +33,8 @@ const courseData = {
       ]
     },
     {
-      title: 'Week 5-6: Azure Services',
+      title: 'Week 7-8: Final Project',
       items: [
-        'Azure Virtual Machines and App Services',
-        'Azure Blob Storage and database services',
-        'Azure Active Directory and identity management'
-      ]
-    },
-    {
-      title: 'Week 7-8: GCP & Final Project',
-      items: [
-        'Google Compute Engine and Cloud Functions',
-        'Cloud Storage and BigQuery analytics',
         'Capstone project: Multi-cloud deployment'
       ]
     }

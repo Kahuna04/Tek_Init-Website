@@ -1,12 +1,12 @@
 const coursesData = [
     {
       id: 'cloud-computing',
-      title: 'Cloud Computing Fundamentals',
-      description: 'Master the basics of cloud technologies including AWS, Azure, and Google Cloud Platform with hands-on projects.',
+      title: 'Cloud Computing',
+      description: 'Master the basics of cloud technologies "AWS" with hands-on projects.',
       icon: '☁️',
       duration: '8 weeks',
       students: '50+',
-      technologies: ['AWS', 'Azure', 'Docker'],
+      technologies: ['AWS'],
       price: '₦150,000'
     },
     {
@@ -16,7 +16,7 @@ const coursesData = [
       icon: '🔄',
       duration: '10 weeks',
       students: '80+',
-      technologies: ['Jenkins', 'GitHub Actions', 'Docker', 'Kubernetes', 'Terraform'],
+      technologies: ['Jenkins', 'GitHub Actions', 'Docker', 'Kubernetes', 'IaC'],
       price: '₦250,000'
     }
   ];

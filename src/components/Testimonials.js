@@ -1,21 +1,21 @@
 const testimonials = [
     {
       quote: "The DevOps course at Tek_init completely changed my career trajectory. Within three months, I landed a junior DevOps role with a 40% salary increase.",
-      name: "James Doe",
+      name: "Ronke Lawal",
       title: "DevOps Engineer",
-      initials: "JD"
+      initials: "RL"
     },
     {
       quote: "As someone with no prior tech background, I was amazed at how approachable the Cloud Computing course was. The instructors made complex concepts easy to understand.",
-      name: "Sarah Chen",
+      name: "Light Oboh",
       title: "Cloud Architect",
-      initials: "SC"
+      initials: "LO"
     },
     {
       quote: "The hands-on projects gave me real confidence. I built a complete CI/CD pipeline that became a talking point in all my interviews.",
-      name: "Michael Johnson",
+      name: "Michael Ige",
       title: "SRE Engineer",
-      initials: "MJ"
+      initials: "MI"
     },
     {
       quote: "Tek_init's career support helped me negotiate a 25% higher offer. The mock interviews were incredibly valuable preparation.",
@@ -25,15 +25,15 @@ const testimonials = [
     },
     {
       quote: "The infrastructure projects were incredibly practical. I could immediately apply what I learned to real-world scenarios.",
-      name: "David Park",
+      name: "David Success",
       title: "Infrastructure Engineer",
       initials: "DP"
     },
     {
       quote: "The mentorship program was outstanding. Having a senior engineer guide me through my learning journey made all the difference.",
-      name: "Rachel Martinez",
+      name: "Rachel Ikem",
       title: "Platform Engineer",
-      initials: "RM"
+      initials: "RI"
     }
   ];
   
