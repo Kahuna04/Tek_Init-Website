@@ -2,7 +2,7 @@ const coursesData = [
     {
       id: 'cloud-computing',
       title: 'Cloud Computing',
-      description: 'Master the basics of cloud technologies "AWS" with hands-on projects.',
+      description: 'This is designed to help you learn the latest Cloud skills using AWS, you will learn how to deploy, build, migrate, and monitor applications on AWS.',
       icon: '☁️',
       duration: '8 weeks',
       students: '50+',
