@@ -3,7 +3,7 @@ export function renderAbout() {
     if (aboutSection) {
         aboutSection.innerHTML = `
             <div class="about-content">
-                <h2 class="section-title">Why Choose Tek_init</h2>
+                <h2 class="section-title">Why Choose Tek_Init</h2>
                 <p class="section-subtitle">We're committed to helping you build practical skills that lead to real career opportunities in the ever-evolving tech landscape.</p>
                 
                 <div class="about-grid">
@@ -20,7 +20,7 @@ export function renderAbout() {
                             <div class="feature-icon">🛠️</div>
                         </div>
                         <h3 class="feature-title">Hands-on Projects</h3>
-                        <p class="feature-desc">Build real-world applications and infrastructure that demonstrate your skills to employers with portfolio-ready projects.</p>
+                        <p class="feature-desc">Build real-world cloud computing platform applications and scalable cloud infrastructure that demonstrate your skills to employers with portfolio-ready projects.</p>
                     </div>
                     
                     <div class="feature-card" data-aos="fade-up" data-aos-delay="300">

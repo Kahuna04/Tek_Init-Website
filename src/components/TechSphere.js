@@ -26,7 +26,8 @@ export function initTechSphere() {
   }
   container.appendChild(renderer.domElement);
 
-  // Enhanced geometries for variety
+  // Enhanced geometries for variety (COMMENTED OUT - not used for sparkles)
+  /*
   const geometries = [
     new THREE.IcosahedronGeometry(1, 1),
     new THREE.OctahedronGeometry(1),
@@ -35,8 +36,9 @@ export function initTechSphere() {
     new THREE.ConeGeometry(0.8, 1.5, 8),
     new THREE.CylinderGeometry(0.5, 0.8, 1.2, 6)
   ];
+  */
 
-  // Create enhanced particle system
+  // Create enhanced particle system (SPARKLES)
   const particleGeometry = new THREE.BufferGeometry();
   const particleCount = 150;
   const positions = new Float32Array(particleCount * 3);
@@ -103,7 +105,8 @@ export function initTechSphere() {
   const particles = new THREE.Points(particleGeometry, particleMaterial);
   scene.add(particles);
 
-  // Create enhanced floating tech elements
+  // Create enhanced floating tech elements (COMMENTED OUT - rotating shapes)
+  /*
   const techElements = [];
   const elementCount = 8;
 
@@ -143,6 +146,7 @@ export function initTechSphere() {
     scene.add(element);
     techElements.push(element);
   }
+  */
 
   // Enhanced camera positioning
   camera.position.set(0, 0, 12);
@@ -168,7 +172,8 @@ export function initTechSphere() {
     // Update particle material time uniform
     particleMaterial.uniforms.time.value = time;
 
-    // Animate tech elements with more complex movement
+    // Animate tech elements with more complex movement (COMMENTED OUT - rotating shapes)
+    /*
     techElements.forEach((el, index) => {
       // Rotation
       el.rotation.x += el.rotationSpeed.x;
@@ -184,6 +189,7 @@ export function initTechSphere() {
       const scale = el.scale.x;
       el.scale.setScalar(scale + Math.sin(time * 2 + offset) * 0.1);
     });
+    */
 
     // Camera movement based on mouse position
     camera.position.x += (mouseX * 2 - camera.position.x) * 0.02;
@@ -210,18 +216,20 @@ export function initTechSphere() {
   };
   window.addEventListener('resize', handleResize);
 
-  // Return cleanup function
+  // Return cleanup function (updated to remove tech elements cleanup)
   return {
     destroy: () => {
       document.removeEventListener('mousemove', onMouseMove);
       window.removeEventListener('resize', handleResize);
       
-      // Clean up Three.js objects
+      // Clean up Three.js objects (tech elements cleanup commented out)
+      /*
       techElements.forEach(el => {
         scene.remove(el);
         el.geometry.dispose();
         el.material.dispose();
       });
+      */
       
       particles.geometry.dispose();
       particles.material.dispose();

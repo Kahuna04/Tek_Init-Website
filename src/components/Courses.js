@@ -1,8 +1,8 @@
 const coursesData = [
     {
       id: 'cloud-computing',
-      title: 'Cloud Computing',
-      description: 'This is designed to help you learn the latest Cloud skills using AWS, you will learn how to deploy, build, migrate, and monitor applications on AWS.',
+      title: 'AWS Cloud Computing Training',
+      description: 'This comprehensive cloud computing certification program helps you master AWS training fundamentals. Learn to deploy, build, migrate, and monitor scalable cloud infrastructure using industry-standard cloud computing platform tools.',
       icon: '☁️',
       duration: '8 weeks',
       students: '50+',
@@ -11,8 +11,8 @@ const coursesData = [
     },
     {
       id: 'devops-engineering',
-      title: 'DevOps Engineering',
-      description: 'Learn to streamline development processes with CI/CD, containers, and orchestration tools like Kubernetes.',
+      title: 'DevOps Engineering Certification',
+      description: 'Master platform engineering and DevOps engineer skills through hands-on training. Learn CI/CD, containers, Kubernetes, and infrastructure automation with cloud native technologies.',
       icon: '🔄',
       duration: '10 weeks',
       students: '80+',
@@ -30,9 +30,6 @@ const coursesData = [
       <div class="course-card" data-course-id="${course.id}">
         <div class="course-img">
           <div class="course-icon">${course.icon}</div>
-          <div class="course-overlay">
-            <button class="preview-btn">Preview Course</button>
-          </div>
         </div>
         <div class="course-content">
           <h3 class="course-title">${course.title}</h3>
@@ -64,7 +61,7 @@ const coursesData = [
     // Render the complete courses section
     coursesSection.innerHTML = `
       <h2 class="section-title">Our Courses</h2>
-      <p class="section-subtitle">Launch your career in tech with our comprehensive courses designed for in-demand skills.</p>
+      <p class="section-subtitle">Launch your career with comprehensive AWS training and DevOps online courses designed for in-demand platform engineering skills.</p>
       
       <div class="courses-grid">
         ${coursesData.map(course => generateCourseCard(course)).join('')}

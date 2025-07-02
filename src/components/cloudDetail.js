@@ -1,19 +1,19 @@
 const courseData = {
   id: 'cloud-computing',
-  title: 'Cloud Computing Fundamentals',
-  subtitle: 'Master AWS with hands-on projects',
-  description: 'This comprehensive course will take you from cloud computing basics to deploying scalable applications on major cloud platform. You\'ll gain practical experience with real-world projects and earn a certificate upon completion.',
+  title: 'AWS Cloud Computing Training Fundamentals',
+  subtitle: 'Master AWS training with hands-on cloud computing platform projects',
+  description: 'This comprehensive AWS training course takes you from cloud computing fundamentals to deploying scalable cloud infrastructure on major cloud computing platforms. Gain practical experience with real-world projects and earn a cloud computing certification upon completion.',
   icon: '☁️',
   price: '₦150,000',
   students: '50+',
   duration: '8 Weeks',
   learnItems: [
-    'Fundamentals of cloud computing and virtualization',
-    'Deploying applications on AWS',
-    'Cloud security best practices and compliance',
-    'Containerization with Docker and Kubernetes',
-    'Serverless computing and microservices',
-    'Cloud cost optimization strategies'
+    'Cloud computing fundamentals and AWS training essentials',
+    'Deploying scalable cloud infrastructure on AWS platform',
+    'Cloud security best practices and compliance frameworks',
+    'Containerization with Docker and cloud native technologies',
+    'Serverless computing and microservices architecture',
+    'Cloud migration strategies and cost optimization'
   ],
   features: [
     {
@@ -136,11 +136,11 @@ export function renderCloudDetail() {
         
         <div class="course-cta">
           <div class="cta-content">
-            <h2 class="cta-title">Ready to Launch Your Cloud Career?</h2>
-            <p class="cta-subtitle">Join ${courseData.students} students who have transformed their careers with hands-on cloud expertise</p>
+            <h2 class="cta-title">Ready to Launch Your Cloud Computing Career?</h2>
+            <p class="cta-subtitle">Join ${courseData.students} students who have transformed their careers with hands-on AWS training and cloud computing platform expertise</p>
             <button class="enroll-btn-cta">
               <span>🎯</span>
-              Start Learning Today
+              Start AWS Training Today
             </button>
           </div>
         </div>

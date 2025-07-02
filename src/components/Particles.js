@@ -40,7 +40,7 @@ export function initParticles() {
     }
   
     // Create some special effect particles
-    const specialParticleCount = 10;
+    const specialParticleCount = 100;
     for (let i = 0; i < specialParticleCount; i++) {
       const particle = document.createElement('div');
       particle.className = 'css-particle special-particle';
@@ -48,7 +48,7 @@ export function initParticles() {
       const size = Math.random() * 6 + 4;
       const posX = Math.random() * 100;
       const posY = Math.random() * 100;
-      const delay = Math.random() * 10;
+      const delay = Math.random() * 5;
       const duration = Math.random() * 20 + 15;
       
       particle.style.cssText = `

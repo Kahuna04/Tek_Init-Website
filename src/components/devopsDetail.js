@@ -1,70 +1,69 @@
 const courseData = {
-    id: 'devops-engineering',
-    title: 'DevOps Engineering Mastery',
-    subtitle: 'Master CI/CD, Infrastructure as Code, and Cloud-Native Operations',
-    description: 'Transform your career with comprehensive DevOps training. Learn industry-standard tools like Docker, Kubernetes, Jenkins, Terraform, and AWS. Build automated pipelines, manage infrastructure at scale, and implement best practices used by top tech companies.',
-    icon: '⚙️',
-    price: '₦250,000',
-    students: '75+',
-    duration: '10 Weeks',
-    learnItems: [
-      'Complete CI/CD pipeline design and implementation',
-      'Infrastructure as Code with Terraform and Ansible',
-      'Container orchestration with Docker and Kubernetes',
-      'Cloud platform automation (AWS, Azure, GCP)',
-      'Monitoring, logging, and observability solutions',
-      'Security integration and DevSecOps practices',
-      'Site reliability engineering (SRE) principles',
-      'GitOps workflows and version control strategies'
-    ],
-    features: [
-      {
-        title: 'Week 1-2: DevOps Foundations & Version Control',
-        items: [
-          'DevOps culture, principles, and methodology overview',
-          'Advanced Git workflows and branching strategies',
-          'GitHub/GitLab collaboration and code review processes',
-          'Setting up development environments and toolchains'
-        ]
-      },
-      {
-        title: 'Week 3-4: Containerization & Orchestration',
-        items: [
-          'Docker fundamentals: images, containers, and registries',
-          'Docker Compose for multi-container applications',
-          'Kubernetes architecture and core concepts',
-          'Pod management, services, and ingress controllers'
-        ]
-      },
-      {
-        title: 'Week 5-6: CI/CD Pipeline Engineering',
-        items: [
-          'Jenkins setup, configuration, and pipeline creation',
-          'GitHub Actions and GitLab CI/CD workflows',
-          'Automated testing integration and quality gates',
-          'Deployment strategies: blue-green, canary, rolling updates'
-        ]
-      },
-      {
-        title: 'Week 7-8: Infrastructure as Code & Cloud Automation',
-        items: [
-          'Terraform fundamentals and state management',
-          'Ansible for configuration management and automation',
-          'AWS/Azure infrastructure provisioning and management',
-          'Cloud-native services integration and optimization'
-        ]
-      },
-      {
-        title: 'Week 9-10: Monitoring, Security & Capstone Project',
-        items: [
-          'Prometheus, Grafana, and ELK stack implementation',
-          'DevSecOps practices and security scanning integration',
-          'Site reliability engineering and incident response',
-          'End-to-end project: Complete DevOps pipeline deployment'
-        ]
-      }
-    ]
-  };
+  id: 'devops-engineering',
+  title: 'DevOps Engineering Certification & Platform Engineering',
+  subtitle: 'Master CI/CD, Infrastructure as Code, and Cloud-Native Platform Engineering',
+  description: 'Transform your career with comprehensive DevOps certification training. Learn industry-standard DevOps tools and technologies like Docker, Kubernetes, Jenkins, Terraform, and multi cloud strategy implementation. Build automated pipelines, manage infrastructure automation, and implement platform engineering practices used by top tech companies.',
+  icon: '⚙️',
+  price: '₦250,000',
+  students: '75+',
+  duration: '10 Weeks',
+  learnItems: [
+    'Complete CI/CD pipeline design and platform engineering',
+    'Infrastructure automation with Terraform and Ansible',
+    'Container orchestration with Docker and Kubernetes',
+    'Monitoring, logging, and observability solutions',
+    'DevOps practices and security integration',
+    'Site reliability engineering (SRE) and platform engineering principles',
+    'GitOps workflows and DevOps tools and technologies'
+  ],
+  features: [
+    {
+      title: 'Week 1-2: DevOps Foundations & Version Control',
+      items: [
+        'DevOps culture, principles, and methodology overview',
+        'Advanced Git workflows and branching strategies',
+        'GitHub/GitLab collaboration and code review processes',
+        'Setting up development environments and toolchains'
+      ]
+    },
+    {
+      title: 'Week 3-4: Containerization & Orchestration',
+      items: [
+        'Docker fundamentals: images, containers, and registries',
+        'Docker Compose for multi-container applications',
+        'Kubernetes architecture and core concepts',
+        'Pod management, services, and ingress controllers'
+      ]
+    },
+    {
+      title: 'Week 5-6: CI/CD Pipeline Engineering',
+      items: [
+        'Jenkins setup, configuration, and pipeline creation',
+        'GitHub Actions and GitLab CI/CD workflows',
+        'Automated testing integration and quality gates',
+        'Deployment strategies: blue-green, canary, rolling updates'
+      ]
+    },
+    {
+      title: 'Week 7-8: Infrastructure as Code & Cloud Automation',
+      items: [
+        'Terraform fundamentals and state management',
+        'Ansible for configuration management and automation',
+        'AWS infrastructure provisioning and management',
+        'Cloud-native services integration and optimization'
+      ]
+    },
+    {
+      title: 'Week 9-10: Monitoring, Security & Capstone Project',
+      items: [
+        'Prometheus, Grafana, and ELK stack implementation',
+        'DevSecOps practices and security scanning integration',
+        'Site reliability engineering and incident response',
+        'End-to-end project: Complete DevOps pipeline deployment'
+      ]
+    }
+  ]
+};
   
   export function renderDevOpsDetail() {
     const devopsDetail = document.getElementById('devopsDetail');
@@ -162,10 +161,10 @@ const courseData = {
           <div class="course-cta">
             <div class="cta-content">
               <h2 class="cta-title">Ready to Become a DevOps Engineer?</h2>
-              <p class="cta-subtitle">Join ${courseData.students} professionals who have accelerated their careers with enterprise-level DevOps skills</p>
+              <p class="cta-subtitle">Join ${courseData.students} professionals who have accelerated their careers with enterprise-level DevOps certification and platform engineering skills</p>
               <button class="enroll-btn-cta">
                 <span>🎯</span>
-                Start Your DevOps Journey
+                Start Your DevOps Engineering Journey
               </button>
             </div>
           </div>
