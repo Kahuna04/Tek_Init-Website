@@ -4,7 +4,7 @@ export function renderAbout() {
         aboutSection.innerHTML = `
             <div class="about-content">
                 <h2 class="section-title">Why Choose Tek_Init</h2>
-                <p class="section-subtitle">We're committed to helping you build practical skills that lead to real career opportunities in the ever-evolving tech landscape.</p>
+                <p class="section-subtitle">We're committed to helping you build practical cloud native technologies and DevOps engineer skills that lead to real career opportunities in the ever-evolving tech landscape.</p>
                 
                 <div class="about-grid">
                     <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
@@ -12,7 +12,7 @@ export function renderAbout() {
                             <div class="feature-icon">👨‍💻</div>
                         </div>
                         <h3 class="feature-title">Industry Experts</h3>
-                        <p class="feature-desc">Learn from professionals with years of experience in leading tech companies like Google, Microsoft, and AWS.</p>
+                        <p class="feature-desc"><p class="feature-desc">Learn AWS training and DevOps Methodology from professionals with years of experience in leading tech companies</p>
                     </div>
                     
                     <div class="feature-card" data-aos="fade-up" data-aos-delay="200">

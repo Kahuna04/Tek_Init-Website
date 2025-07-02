@@ -16,7 +16,7 @@ export function renderHero() {
             <span class="tagline-cursor">|</span>
           </p>
           <div class="hero-description">
-            <p>Transform your passion into expertise with cutting-edge courses designed for you</p>
+            <p>Transform your passion into expertise with cutting-edge courses designed for real career growth</p>
           </div>
           <div class="hero-actions">
             <button class="hero-btn hero-btn-primary">
